@@ -1,12 +1,15 @@
 /* var http = require('http')
 var assets = require('./assets.js') */
-import express from 'express'
+import express from 'express';
 const app = express()
 
 import api from '../server/api'
 
 
 app.use(express.static('public'))
+
+
+
 
 app.use('/api', api)
 
