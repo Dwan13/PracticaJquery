@@ -3,7 +3,7 @@ var assets = require('./assets.js') */
 import express from 'express'
 const app = express()
 
-import api from '../server/api'
+var api = require('../server/api')
 
 
 app.use(express.static('public'))
