@@ -1,0 +1,26 @@
+{
+    "name": "tvify",
+    "description": "Una web app para seleccionar tus shows favoritos",
+    "version": "0.1.0",
+    "dependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.0",
+        "@babel/preset-env": "^7.9.0",
+        "express": "^4.17.1",
+        "jquery": "^3.4.1",
+        "page": "^1.11.5",
+        "qs": "^6.9.3"
+    },
+    "devDependencies": {
+        "babelify": "^10.0.0",
+        "browserify": "^16.5.1"
+    },
+    "scripts": {
+        "public": "mkdir public",
+        "build-js": "browserify src/client/index.js > public/app.js -t [ babelify --presets [ @babel/preset-env  ]  ]",
+        "copy-files": "cp src/client/index.css public/app.css && cp src/client/index.html public/index.html",
+        "build": "npm run public && npm run build-js && npm run copy-files",
+        "serve": "babel-node src/server",
+        "start": "npm run build && npm run serve"
+    }
+}
