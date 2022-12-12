@@ -3,7 +3,7 @@
     "description": "Una web app para seleccionar tus shows favoritos",
     "version": "0.1.0",
     "dependencies": {
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "jquery": "^3.4.1",
         "page": "^1.11.5",
         "qs": "^6.9.3"
